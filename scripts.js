@@ -18,3 +18,16 @@ if(!dividend || !divider) {
 const numDividend = Number(dividend);
 const numDivider = Number(divider);
 
+//Check (If inputs are values)
+if(isNaN(numDividend) || isNaN(numDivider)) {
+  document.body.innerText = "Non-numeric value entered. Please reload the page and try again";
+  console.error(new Error("Invalid Input: Non-Numeric value entered."));
+  return;
+}
+
+//Division
+if(numDivider ===0) {
+  result.innerText = "Division not performed. Invalid number provided. Try again.";
+  console.error(new Error("Division by zero error"));
+  return;
+}
