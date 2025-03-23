@@ -31,3 +31,10 @@ if(numDivider ===0) {
   console.error(new Error("Division by zero error"));
   return;
 }
+
+//Display Whole Number
+GamepadButton.addEventListener('click', () => {
+result.innerText = Math.floor(numDividend / numDivider);
+});
+
+
