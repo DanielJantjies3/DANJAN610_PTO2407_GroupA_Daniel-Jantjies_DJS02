@@ -5,9 +5,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
-  result.innerText = dividend / divider;
-});
-
+  
 //Checking for empty inputs
 if(!dividend || !divider) {
   result.innerText = "“Division not performed. Both values are required in inputs. Try again."
@@ -33,7 +31,6 @@ if(numDivider ===0) {
 }
 
 //Display Whole Number
-GamepadButton.addEventListener('click', () => {
 result.innerText = Math.floor(numDividend / numDivider);
 });
 
